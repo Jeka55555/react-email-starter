@@ -7,11 +7,10 @@ import {
   Text,
   Img,
 } from "@react-email/components";
-
 import React from "react";
+import UserName from "./components/Username";
 import SupportEmail from "./components/SupportEmail";
 import SupportPhone from "./components/SupportPhone";
-import UserName from "./components/Username";
 
 const baseUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -29,25 +28,28 @@ const EldTeamolate = () => {
             Dear <UserName />,
           </Text>
           <Text style={welcomeMessage}>
-            Thank you for registering on the CORE ELD Platform.
+            Thank you for registering with CORE ELD.
           </Text>
           <Text style={welcomeMessage}>
-            We would like to inform you that your account is currently in a
-            "Temporary" status.
+            After a thorough review, we regret to inform you that we are unable
+            to approve your registration at this time.
           </Text>
           <Text style={introText}>
-            This means that our team is in the process of verifying the
-            information you provided during registration. You will be able to
-            log into the system and access certain features, although some
-            functionality may be limited until verification is complete.
+            If you believe this decision was made in error or if you would like
+            to provide additional information, please don’t hesitate to reach
+            out to us. You can contact us via email at
+            <SupportEmail /> or by phone at
+            <SupportPhone /> . Our team is available to assist you and provide
+            guidance on the next steps.
           </Text>
           <Text style={introText}>
-            If you have any questions or need assistance, please contact us at
-            <SupportEmail />.
+            We sincerely appreciate your interest in CORE ELD and hope to have
+            the opportunity to work with you in the future.
           </Text>
           <Text style={introText}>
             Best regards,
-            <br /> <b>Core ELD Team.</b> <br /> <b>Phone:</b> <SupportPhone />
+            <br /> <b>Core ELD Team.</b> <br /> <b>Phone:</b>
+            <SupportPhone />
             <br />
             <b>Email:</b>
             <SupportEmail />
@@ -107,4 +109,8 @@ const addition = {
   fontSize: "8px",
   padding: "0 20px",
   lineHeight: "1.2",
+};
+
+const blueText = {
+  color: "#0000FF",
 };
