@@ -7,11 +7,11 @@ import {
   Text,
   Img,
 } from "@react-email/components";
-
 import React from "react";
+import UserName from "./components/Username";
+import PasswordLink from "./components/PasswordLink";
 import SupportEmail from "./components/SupportEmail";
 import SupportPhone from "./components/SupportPhone";
-import UserName from "./components/Username";
 
 const baseUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -26,31 +26,32 @@ const EldTeamolate = () => {
         <Container style={container}>
           <Img style={img} src={`${baseUrl}/static/top-insert.png`} />
           <Text style={name}>
-            Dear <UserName />,
+            Dear <UserName /> ,
           </Text>
           <Text style={welcomeMessage}>
-            Thank you for registering on the CORE ELD Platform.
-          </Text>
-          <Text style={welcomeMessage}>
-            We would like to inform you that your account is currently in a
-            "Temporary" status.
+            We received a request to reset the password for your CORE ELD
+            account. If you made this request, please follow the link below to
+            reset your password:
           </Text>
           <Text style={introText}>
-            This means that our team is in the process of verifying the
-            information you provided during registration. You will be able to
-            log into the system and access certain features, although some
-            functionality may be limited until verification is complete.
+            <PasswordLink />
           </Text>
           <Text style={introText}>
-            If you have any questions or need assistance, please contact us at
-            <SupportEmail />.
+            For security reasons, this link will expire in 24 hours. If you did
+            not request a password reset, please contact us immediately at
+            <SupportEmail /> or <br />
+            <SupportPhone /> .
+          </Text>
+          <Text style={introText}>
+            We take your account's security seriously and are here to assist
+            with any concerns you may have.
           </Text>
           <Text style={introText}>
             Best regards,
-            <br /> <b>Core ELD Team.</b> <br /> <b>Phone:</b> <SupportPhone />
-            <br />
-            <b>Email:</b>
+            <br /> <b>Core ELD Team.</b> <br /> <b>Phone:</b>
             <SupportEmail />
+            <br />
+            <b>Email:</b> <SupportPhone />
           </Text>
           <Text style={addition}>
             Core ELD has undergone rigorous testing in accordance with the
@@ -107,4 +108,7 @@ const addition = {
   fontSize: "8px",
   padding: "0 20px",
   lineHeight: "1.2",
+};
+const blueText = {
+  color: "#0000FF",
 };
