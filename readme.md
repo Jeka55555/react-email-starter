@@ -25,3 +25,22 @@ Open [localhost:3000](http://localhost:3000) with your browser to see the result
 ## License
 
 MIT License
+
+
+
+<!-- 
+
+active - approved 
+blocked - update-registration
+inctive - update-registration
+temporary - eld-teamplate
+registration - eld-teamplate
+
+
+
+
+email secret key 8OQtm3xYSFnZKsHGa8pQwdTUFk/xqYPxUVFcOmcD amazon
+
+
+
+ -->
