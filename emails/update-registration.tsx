@@ -11,7 +11,6 @@ import React from "react";
 import UserName from "./components/Username";
 import SupportEmail from "./components/SupportEmail";
 import SupportPhone from "./components/SupportPhone";
-import UserNameLogIn from "./components/UserNameLogIn";
 
 const baseUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -26,7 +25,7 @@ const EldTeamolate = () => {
         <Container style={container}>
           <Img style={img} src={`${baseUrl}/static/top-insert.png`} />
           <Text style={name}>
-            Dear <UserNameLogIn />,
+            Dear <UserName />,
           </Text>
           <Text style={welcomeMessage}>
             Thank you for registering with CORE ELD.
